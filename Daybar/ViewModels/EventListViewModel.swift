@@ -29,7 +29,6 @@ class EventListViewModel: NSObject, ObservableObject {
     @objc func fetch() {
         let mainCalendarId = GoogleLoader.shared.profile?.email
         let apiKey = keys?.googleApiKey
-        print(apiKey)
         if let token = GoogleLoader.shared.oauth2.accessToken {
             self.errorCode = nil
             let timeMin = Dates().timeMinForDay(self.date)

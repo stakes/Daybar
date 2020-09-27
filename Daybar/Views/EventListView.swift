@@ -90,7 +90,6 @@ struct EmptyListView: View {
                             .fontWeight(.semibold)
                         Text("Couldn't fetch meetings.")
                         Button(action: {
-                            print("fetch again")
                             self.evm?.refreshAndRefetch()
                         }) {
                             Text("Try again")

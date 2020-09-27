@@ -72,7 +72,6 @@ struct EventView: View {
                         Button(action: {
                             if let url = URL(string: self.eventViewModel.event.zoomLink!) {
                                 NSWorkspace.shared.open(url)
-                                print(url)
                             }
                         }) {
                             HStack(alignment: .center, spacing: 4)  {
