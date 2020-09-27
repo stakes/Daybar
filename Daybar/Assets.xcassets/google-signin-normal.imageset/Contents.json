@@ -1,0 +1,40 @@
+{
+  "images" : [
+    {
+      "filename" : "btn_google_signin_dark_normal_ios.png",
+      "idiom" : "mac",
+      "resizing" : {
+        "cap-insets" : {
+          "left" : 50,
+          "right" : 10
+        },
+        "center" : {
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "3-part-horizontal"
+      },
+      "scale" : "1x"
+    },
+    {
+      "filename" : "btn_google_signin_dark_normal_ios@2x.png",
+      "idiom" : "mac",
+      "resizing" : {
+        "cap-insets" : {
+          "left" : 98,
+          "right" : 20
+        },
+        "center" : {
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "3-part-horizontal"
+      },
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

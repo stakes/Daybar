@@ -38,6 +38,7 @@
 		C810A0AA25200F1D00B36172 /* OAuth2 in Frameworks */ = {isa = PBXBuildFile; productRef = C810A0A925200F1D00B36172 /* OAuth2 */; };
 		C810A0AE25200F3500B36172 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = C810A0AD25200F3500B36172 /* Introspect */; };
 		C810A0B225200F4900B36172 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = C810A0B125200F4900B36172 /* HotKey */; };
+		C810A0B52520111100B36172 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C810A0B42520111100B36172 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		C810A08B25200EB400B36172 /* DropdownMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownMenuView.swift; sourceTree = "<group>"; };
 		C810A08C25200EB400B36172 /* AvatarFromURLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarFromURLView.swift; sourceTree = "<group>"; };
 		C810A08D25200EB400B36172 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C810A0B42520111100B36172 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				C810A07625200EB400B36172 /* EventTime.swift */,
 				C810A07725200EB400B36172 /* Profile.swift */,
 				C810A07825200EB400B36172 /* EventList.swift */,
+				C810A0B42520111100B36172 /* Keys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C810A09025200EB400B36172 /* Event.swift in Sources */,
+				C810A0B52520111100B36172 /* Keys.swift in Sources */,
 				C810A0A425200EB400B36172 /* AvatarFromURLView.swift in Sources */,
 				C810A09E25200EB400B36172 /* GoogleLoader.swift in Sources */,
 				C810A09A25200EB400B36172 /* ZoomParser.swift in Sources */,
