@@ -1,6 +1,6 @@
 //
 //  List+RemoveBackground.swift
-//  MacTodayTest
+//  Daybar
 //
 //  Created by Jay Stakelon on 8/22/20.
 //  Copyright © 2020 Jay Stakelon. All rights reserved.
