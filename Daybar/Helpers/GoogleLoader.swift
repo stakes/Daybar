@@ -45,6 +45,7 @@ class GoogleLoader: OAuth2DataLoader, ObservableObject {
         perform(request: req) { response in
             do {
                 let dict = try response.responseJSON()
+                print(dict)
                 if let error = (dict["error"] as? OAuth2JSON)?["message"] as? String {
                     DispatchQueue.main.async {
                         callback(OAuth2Error.generic(error))
@@ -75,7 +76,6 @@ class GoogleLoader: OAuth2DataLoader, ObservableObject {
     }
     
     func signIn() {
-        print("signIn()")
         signedIn = false
         NotificationCenter.default.removeObserver(self, name: OAuth2AppDidReceiveCallbackNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleRedirect(_:)), name: OAuth2AppDidReceiveCallbackNotification, object: nil)
