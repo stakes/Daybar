@@ -45,7 +45,6 @@ class GoogleLoader: OAuth2DataLoader, ObservableObject {
         perform(request: req) { response in
             do {
                 let dict = try response.responseJSON()
-                print(dict)
                 if let error = (dict["error"] as? OAuth2JSON)?["message"] as? String {
                     DispatchQueue.main.async {
                         callback(OAuth2Error.generic(error))

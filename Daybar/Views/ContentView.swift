@@ -62,7 +62,6 @@ struct LandingView: View {
                 .landingSubhead()
                 
             Button(action: {
-                    print(self.googleLoader)
                     self.googleLoader.signIn()
                 }) {
                     Text("Sign in with Google")

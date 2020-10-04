@@ -45,7 +45,6 @@ class EventListViewModel: NSObject, ObservableObject {
             
             URLSession.shared.dataTask(with: request) { data, response, error in
                 do {
-//                    self.printResponse(data!)
                     let eventList = try JSONDecoder().decode(EventList.self, from: data!)
                     DispatchQueue.main.async {
                         if (self.isFirstFetchForDay) {

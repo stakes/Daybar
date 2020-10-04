@@ -23,7 +23,7 @@ class ZoomParser {
 
         var lastZoomMatch: String?
         for match in matches {
-            if ((match.url?.absoluteString.contains("zoom.us")) == true) {
+            if ((match.url?.absoluteString.contains("zoom.us/j")) == true) {
                 lastZoomMatch = match.url?.absoluteString
             }
         }
