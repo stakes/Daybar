@@ -39,6 +39,7 @@
 		C810A0AE25200F3500B36172 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = C810A0AD25200F3500B36172 /* Introspect */; };
 		C810A0B225200F4900B36172 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = C810A0B125200F4900B36172 /* HotKey */; };
 		C810A0B52520111100B36172 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C810A0B42520111100B36172 /* Keys.swift */; };
+		C8936058252A8F7500936DD5 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8936057252A8F7500936DD5 /* UserDefaultsStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		C810A08C25200EB400B36172 /* AvatarFromURLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarFromURLView.swift; sourceTree = "<group>"; };
 		C810A08D25200EB400B36172 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C810A0B42520111100B36172 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		C8936057252A8F7500936DD5 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				C810A08325200EB400B36172 /* Dates.swift */,
 				C810A08425200EB400B36172 /* ProgressIndicator.swift */,
 				C810A08525200EB400B36172 /* GoogleLoader.swift */,
+				C8936057252A8F7500936DD5 /* UserDefaultsStore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8936058252A8F7500936DD5 /* UserDefaultsStore.swift in Sources */,
 				C810A09025200EB400B36172 /* Event.swift in Sources */,
 				C810A0B52520111100B36172 /* Keys.swift in Sources */,
 				C810A0A425200EB400B36172 /* AvatarFromURLView.swift in Sources */,

@@ -19,6 +19,11 @@ class EventListViewModel: NSObject, ObservableObject {
     @Published var isReallyEmpty: Bool = false
     @Published var errorCode: Int?
     
+    var testMode = true
+    
+    func testTime() -> Date {
+        return ISO8601DateFormatter().date(from: "2020-10-02T13:32:00-07:00")!
+    }
     
 //    var timer: Timer?
     
@@ -58,6 +63,16 @@ class EventListViewModel: NSObject, ObservableObject {
                         arr.removeAll(where: { $0.event.responseStatus == "declined" })
                         self.isReallyEmpty = (arr.count == 0) ? true : false
                         self.events = self.sortByStartTime(arr)
+                        if (self.testMode) {
+                            let calendar = Calendar.current
+                            let testTime = calendar.date(byAdding: .minute, value: -15, to: self.testTime())
+                            self.events.removeAll(where: { testTime! > ISO8601DateFormatter().date(from: $0.event.start.dateTime!)! })
+//                            for e in self.events {
+//                                if (self.makeTestDateTime() > ISO8601DateFormatter().date(from: e.event.start.dateTime!)!) {
+//
+//                                }
+//                            }
+                        }
                     }
 
                 } catch _ as NSError {

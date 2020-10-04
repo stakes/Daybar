@@ -9,9 +9,11 @@
 import Cocoa
 import SwiftUI
 import OAuth2
+import Combine
 
 let OAuth2AppDidReceiveCallbackNotification = NSNotification.Name(rawValue: "OAuth2AppDidReceiveCallback")
 var keys: Keys?
+var userDefaultsStore = UserDefaultsStore()
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -19,7 +21,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
     var popover: NSPopover!
     var statusBarItem: NSStatusItem!
-    
 
     // register our app to get notified when launched via URL
     func applicationWillFinishLaunching(_ notification: Notification) {
@@ -34,11 +35,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Get keys from plist
         readKeys()
-        // Get the googleDelegate from AppDelegate
+        // Get the googleLoader
         let googleLoader = GoogleLoader.shared
-        // Add googleDelegate as an environment object
+        // Add environment objects
         let contentView = ContentView()
             .environmentObject(googleLoader)
+            .environmentObject(userDefaultsStore)
         
         let popover = NSPopover()
         popover.contentSize = NSSize(width: 400, height: 400)
@@ -51,6 +53,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
              button.image = NSImage(named: "menubar-icon")
              button.action = #selector(togglePopover(_:))
         }
+        
+        // Set calendar mode to false if it's never been set
+        if (!UserDefaults.exists(key: "isCalendarMode")) {
+            UserDefaults.standard.set(false, forKey: "isCalendarMode")
+        }
+//        UserDefaults.standard.set(true, forKey: "isCalendarMode")
 
 //        // Create the window and set the content view.
 //        window = NSWindow(
@@ -102,7 +110,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 }
 
-
+//class UserDefaultsStore: ObservableObject {
+//    let objectWillChange = PassthroughSubject<UserDefaultsStore, Never>()
+//    @Published var isCalendarMode = UserDefaults.standard.bool(forKey: "isCalendarMode") {
+//        didSet {
+//            UserDefaults.standard.set(self.isCalendarMode, forKey: "isCalendarMode")
+//        }
+//        willSet {
+//            print(self.isCalendarMode)
+//            objectWillChange.send(self)
+//        }
+//    }
+//}
 
 
 class PopoverContentView:NSView {

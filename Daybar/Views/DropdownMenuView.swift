@@ -49,9 +49,9 @@ struct DropdownMenuView: NSViewRepresentable {
         let signOutItem = NSMenuItem(title: "Sign out", action: #selector(GoogleLoader.signOutFromMenu(_:)), keyEquivalent: "")
         signOutItem.target = GoogleLoader.shared
         
-//        let refreshItem = NSMenuItem(title: "Refresh", action: #selector(Coordinator.fetchAction), keyEquivalent: "r")
-//        refreshItem.representedObject = eventListViewModel
-//        refreshItem.target = context.coordinator
+        let calendarModeItem = NSMenuItem(title: "Calendar mode", action: #selector(Coordinator.toggleCalendarModeAction), keyEquivalent: "")
+        calendarModeItem.state = UserDefaultsStore().isCalendarMode ? .on : .off
+        calendarModeItem.target = context.coordinator
         
         let quitItem = NSMenuItem(title: "Quit", action: #selector(Coordinator.quitAction), keyEquivalent: "q")
         quitItem.target = context.coordinator
@@ -60,7 +60,9 @@ struct DropdownMenuView: NSViewRepresentable {
         nsView.menu?.insertItem(emailItem, at: 1)
         nsView.menu?.insertItem(signOutItem, at: 2)
         nsView.menu?.insertItem(NSMenuItem.separator(), at: 3)
-        nsView.menu?.insertItem(quitItem, at: 4)
+        nsView.menu?.insertItem(calendarModeItem, at: 4)
+        nsView.menu?.insertItem(NSMenuItem.separator(), at: 5)
+        nsView.menu?.insertItem(quitItem, at: 6)
 
         let cell = nsView.cell as? NSButtonCell
         cell?.imagePosition = .imageOnly
@@ -83,6 +85,11 @@ struct DropdownMenuView: NSViewRepresentable {
         }
         @objc func quitAction(_ sender: NSMenuItem) {
             NSApplication.shared.terminate(self)
+        }
+        @objc func toggleCalendarModeAction(_ sender: NSMenuItem) {
+            let userDefaultsStore = UserDefaultsStore()
+            userDefaultsStore.isCalendarMode = !userDefaultsStore.isCalendarMode
+            sender.state = userDefaultsStore.isCalendarMode ? .on : .off
         }
     }
 }
