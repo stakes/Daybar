@@ -32,7 +32,7 @@ struct HeaderView: View {
                     }.buttonStyle(PlainButtonStyle())
                 }
                 Spacer()
-                DropdownMenuView(profile: googleLoader.profile ?? nil).frame(width: 48, height: 24)
+                DropdownMenuView(profile: googleLoader.profile ?? nil, eventListViewModel: eventListViewModel).frame(width: 48, height: 24)
             }.padding(12)
             Divider().background(Color.gray.opacity(0.1))
         }.background(Color.gray.opacity(0.1))

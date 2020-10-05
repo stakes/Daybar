@@ -19,13 +19,6 @@ class EventListViewModel: NSObject, ObservableObject {
     @Published var isReallyEmpty: Bool = false
     @Published var errorCode: Int?
     
-    var testMode = true
-    
-    func testTime() -> Date {
-//        return ISO8601DateFormatter().date(from: "2020-10-02T13:32:00-07:00")!
-        return Date()
-    }
-    
     var timer: Timer?
     
     func clear() {
@@ -36,6 +29,12 @@ class EventListViewModel: NSObject, ObservableObject {
     // maybe it'd be better if these were separated at some point
     // but that day is not today
     @objc func fetch() {
+        
+        // reset the date if we aren't in calendar mode
+        if (!userDefaultsStore.isCalendarMode) {
+            self.date = Date()
+        }
+        
         let mainCalendarId = GoogleLoader.shared.profile?.email
         let apiKey = keys?.googleApiKey
         if let token = GoogleLoader.shared.oauth2.accessToken {
@@ -67,9 +66,10 @@ class EventListViewModel: NSObject, ObservableObject {
                         arr.removeAll(where: { $0.event.responseStatus == "declined" })
                         self.isReallyEmpty = (arr.count == 0) ? true : false
                         self.events = self.sortByStartTime(arr)
-                        if (self.testMode) {
+                        // remove past events from view
+                        if (!userDefaultsStore.isCalendarMode) {
                             let calendar = Calendar.current
-                            let testTime = calendar.date(byAdding: .minute, value: -15, to: self.testTime())
+                            let testTime = calendar.date(byAdding: .minute, value: -15, to: Date())
                             self.events.removeAll(where: { testTime! > ISO8601DateFormatter().date(from: $0.event.start.dateTime!)! })
                         }
                     }

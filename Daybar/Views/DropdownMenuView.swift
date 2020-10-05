@@ -11,6 +11,7 @@ import SwiftUI
 struct DropdownMenuView: NSViewRepresentable {
     
     var profile: Profile?
+    var eventListViewModel: EventListViewModel?
     
     func makeNSView(context: Context) -> NSPopUpButton {
         
@@ -51,6 +52,7 @@ struct DropdownMenuView: NSViewRepresentable {
         
         let calendarModeItem = NSMenuItem(title: "Calendar mode", action: #selector(Coordinator.toggleCalendarModeAction), keyEquivalent: "")
         calendarModeItem.state = UserDefaultsStore().isCalendarMode ? .on : .off
+        calendarModeItem.representedObject = eventListViewModel
         calendarModeItem.target = context.coordinator
         
         let quitItem = NSMenuItem(title: "Quit", action: #selector(Coordinator.quitAction), keyEquivalent: "q")
@@ -90,6 +92,8 @@ struct DropdownMenuView: NSViewRepresentable {
             let userDefaultsStore = UserDefaultsStore()
             userDefaultsStore.isCalendarMode = !userDefaultsStore.isCalendarMode
             sender.state = userDefaultsStore.isCalendarMode ? .on : .off
+            let vm = sender.representedObject as! EventListViewModel
+            vm.fetch()
         }
     }
 }
