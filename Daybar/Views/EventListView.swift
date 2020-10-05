@@ -13,7 +13,7 @@ struct EventListView: View {
     
     @ObservedObject var eventListViewModel: EventListViewModel
     
-    let hotKey = HotKey(key: .r, modifiers: [.command, .option])
+//    let hotKey = HotKey(key: .r, modifiers: [.command, .option])
     
     var body: some View {
         VStack {
@@ -47,14 +47,11 @@ struct EventListView: View {
         .transition(.opacity)
         .onAppear() {
             self.eventListViewModel.onAppear()
-            /// listen for hot key and refresh
-            self.hotKey.keyDownHandler = {
-                self.eventListViewModel.fetch()
-            }
+            // listen for hot key and refresh
+//            self.hotKey.keyDownHandler = {
+//                self.eventListViewModel.fetch()
+//            }
         }
-//        .onReceive(self.eventListViewModel.objectWillChange) {
-//            print($0)
-//        }
     }
 }
 

@@ -22,15 +22,19 @@ class EventListViewModel: NSObject, ObservableObject {
     var testMode = true
     
     func testTime() -> Date {
-        return ISO8601DateFormatter().date(from: "2020-10-02T13:32:00-07:00")!
+//        return ISO8601DateFormatter().date(from: "2020-10-02T13:32:00-07:00")!
+        return Date()
     }
     
-//    var timer: Timer?
+    var timer: Timer?
     
     func clear() {
         self.events = []
     }
 
+    // this fetches AND refreshes the events list
+    // maybe it'd be better if these were separated at some point
+    // but that day is not today
     @objc func fetch() {
         let mainCalendarId = GoogleLoader.shared.profile?.email
         let apiKey = keys?.googleApiKey
@@ -67,11 +71,6 @@ class EventListViewModel: NSObject, ObservableObject {
                             let calendar = Calendar.current
                             let testTime = calendar.date(byAdding: .minute, value: -15, to: self.testTime())
                             self.events.removeAll(where: { testTime! > ISO8601DateFormatter().date(from: $0.event.start.dateTime!)! })
-//                            for e in self.events {
-//                                if (self.makeTestDateTime() > ISO8601DateFormatter().date(from: e.event.start.dateTime!)!) {
-//
-//                                }
-//                            }
                         }
                     }
 
@@ -100,10 +99,11 @@ class EventListViewModel: NSObject, ObservableObject {
     
     func onAppear() {
         fetch()
-//        timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { timer in
-//            self.fetch()
-//        }
-//        timer?.tolerance = 1
+        // ping every minute for updates
+        timer = Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true) { timer in
+            self.fetch()
+        }
+        timer?.tolerance = 1
     }
     
     func refreshAndRefetch() {
