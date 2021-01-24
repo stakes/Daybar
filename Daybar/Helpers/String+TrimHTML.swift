@@ -21,7 +21,11 @@ extension String {
         ]
         
         let attributedString = try? NSAttributedString(data: htmlStringData, options: options, documentAttributes: nil)
-        return attributedString?.string
+        
+        let string = attributedString?.string
+        let trimmed = string?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        return trimmed
     }
     
 }
