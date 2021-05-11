@@ -17,12 +17,6 @@
       "oAP" : "\/docs\/.gitignore",
       "oF" : 0
     },
-    "\/build\/node_modules" : {
-      "ft" : 65536,
-      "oA" : 2,
-      "oAP" : "\/docs\/build\/node_modules",
-      "oF" : 0
-    },
     "\/docs" : {
       "ft" : 65536,
       "oA" : 1,
@@ -248,7 +242,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-pink",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 642398659.24563503
+    "lastBuiltDate" : 642400211.346331
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
