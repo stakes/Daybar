@@ -141,12 +141,12 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/source\/assets\/snapbar-16x16.png" : {
+    "\/source\/assets\/daybar-img-dark.png" : {
       "ft" : 32768,
-      "iS" : 694,
+      "iS" : 139802,
       "oA" : 0,
-      "oAP" : "\/docs\/assets\/snapbar-16x16.png",
-      "oF" : 1,
+      "oAP" : "\/docs\/assets\/daybar-img-dark.png",
+      "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -154,35 +154,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/source\/assets\/snapbar-32x32.png" : {
+    "\/source\/assets\/daybar-img-light.png" : {
       "ft" : 32768,
-      "iS" : 1636,
+      "iS" : 151083,
       "oA" : 0,
-      "oAP" : "\/docs\/assets\/snapbar-32x32.png",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/source\/assets\/snapbar-icon.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/docs\/assets\/snapbar-icon.svg",
-      "oF" : 1,
-      "opt" : 1,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/source\/assets\/snapbar-img.png" : {
-      "ft" : 32768,
-      "iS" : 249942,
-      "oA" : 0,
-      "oAP" : "\/docs\/assets\/snapbar-img.png",
-      "oF" : 1,
+      "oAP" : "\/docs\/assets\/daybar-img-light.png",
+      "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -242,7 +219,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-pink",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 642400211.346331
+    "lastBuiltDate" : 642663711.30089498
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
