@@ -17,12 +17,6 @@
       "oAP" : "\/docs\/.gitignore",
       "oF" : 0
     },
-    "\/docs" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/docs\/docs",
-      "oF" : 0
-    },
     "\/node_modules" : {
       "ft" : 65536,
       "oA" : 1,
@@ -146,7 +140,7 @@
       "iS" : 139802,
       "oA" : 0,
       "oAP" : "\/docs\/assets\/daybar-img-dark.png",
-      "oF" : 0,
+      "oF" : 1,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -159,7 +153,7 @@
       "iS" : 151083,
       "oA" : 0,
       "oAP" : "\/docs\/assets\/daybar-img-light.png",
-      "oF" : 0,
+      "oF" : 1,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -219,7 +213,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-pink",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 642663711.30089498
+    "lastBuiltDate" : 642818321.85055006
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
