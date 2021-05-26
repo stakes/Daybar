@@ -70,7 +70,18 @@ class EventListViewModel: NSObject, ObservableObject {
                         if (!userDefaultsStore.isCalendarMode) {
                             let calendar = Calendar.current
                             let testTime = calendar.date(byAdding: .minute, value: -15, to: Date())
-                            self.events.removeAll(where: { testTime! > ISO8601DateFormatter().date(from: $0.event.start.dateTime!)! })
+                            // self.events.removeAll(where: { testTime! > ISO8601DateFormatter().date(from: $0.event.start.dateTime!)! })
+                            // can't do that ^^^ because all-day events break it so instead...
+                            for evm in self.events {
+                                let dt:String? = evm.event.start.dateTime
+                                if dt != nil {
+                                    if (testTime! > ISO8601DateFormatter().date(from: evm.event.start.dateTime!)!) {
+                                        if let index = self.events.firstIndex(of: evm) {
+                                            self.events.remove(at: index)
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
 

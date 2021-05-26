@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-class EventViewModel: ObservableObject, Identifiable {
+class EventViewModel: ObservableObject, Identifiable, Equatable {
     
     @Published var event: Event
 //    @Published var formattedDescripton: String
@@ -35,6 +35,10 @@ class EventViewModel: ObservableObject, Identifiable {
                 self.event.responseStatus = attendee.responseStatus
             }
         }
+    }
+    
+    static func ==(lhs: EventViewModel, rhs: EventViewModel) -> Bool {
+        return lhs.event.id == rhs.event.id
     }
     
     

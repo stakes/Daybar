@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C810A03B25200D1400B36172 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C810A03A25200D1400B36172 /* Preview Assets.xcassets */; };
 		C810A03E25200D1400B36172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C810A03C25200D1400B36172 /* Main.storyboard */; };
-		C810A04825200D4500B36172 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C810A04725200D4500B36172 /* Keys.plist */; };
 		C810A07025200E7200B36172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C810A06F25200E7200B36172 /* AppDelegate.swift */; };
 		C810A08E25200EB400B36172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C810A07225200EB300B36172 /* Assets.xcassets */; };
 		C810A08F25200EB400B36172 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C810A07325200EB300B36172 /* Colors.xcassets */; };
@@ -39,6 +38,7 @@
 		C810A0AE25200F3500B36172 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = C810A0AD25200F3500B36172 /* Introspect */; };
 		C810A0B225200F4900B36172 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = C810A0B125200F4900B36172 /* HotKey */; };
 		C810A0B52520111100B36172 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C810A0B42520111100B36172 /* Keys.swift */; };
+		C86B1506265C9A9D00A0EACA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C86B1505265C9A9D00A0EACA /* Keys.plist */; };
 		C8936058252A8F7500936DD5 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8936057252A8F7500936DD5 /* UserDefaultsStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,6 @@
 		C810A03D25200D1400B36172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C810A03F25200D1400B36172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C810A04025200D1400B36172 /* Daybar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Daybar.entitlements; sourceTree = "<group>"; };
-		C810A04725200D4500B36172 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		C810A06F25200E7200B36172 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C810A07225200EB300B36172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C810A07325200EB300B36172 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		C810A08C25200EB400B36172 /* AvatarFromURLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarFromURLView.swift; sourceTree = "<group>"; };
 		C810A08D25200EB400B36172 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C810A0B42520111100B36172 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		C86B1505265C9A9D00A0EACA /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		C8936057252A8F7500936DD5 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,7 +120,7 @@
 				C810A06F25200E7200B36172 /* AppDelegate.swift */,
 				C810A03C25200D1400B36172 /* Main.storyboard */,
 				C810A03F25200D1400B36172 /* Info.plist */,
-				C810A04725200D4500B36172 /* Keys.plist */,
+				C86B1505265C9A9D00A0EACA /* Keys.plist */,
 				C810A04025200D1400B36172 /* Daybar.entitlements */,
 				C810A03925200D1400B36172 /* Preview Content */,
 			);
@@ -219,7 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					C810A02F25200D1400B36172 = {
 						CreatedOnToolsVersion = 12.0;
@@ -256,10 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C810A08F25200EB400B36172 /* Colors.xcassets in Resources */,
-				C810A04825200D4500B36172 /* Keys.plist in Resources */,
 				C810A03E25200D1400B36172 /* Main.storyboard in Resources */,
 				C810A08E25200EB400B36172 /* Assets.xcassets in Resources */,
 				C810A03B25200D1400B36172 /* Preview Assets.xcassets in Resources */,
+				C86B1506265C9A9D00A0EACA /* Keys.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,9 +434,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Daybar/Daybar.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Daybar/Preview Content\"";
 				DEVELOPMENT_TEAM = F725AN38JF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -447,7 +448,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = "1.0-alpha";
+				MARKETING_VERSION = "1.02-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stakelon.Daybar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -462,9 +463,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Daybar/Daybar.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Daybar/Preview Content\"";
 				DEVELOPMENT_TEAM = F725AN38JF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -475,7 +477,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = "1.0-alpha";
+				MARKETING_VERSION = "1.02-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stakelon.Daybar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
