@@ -17,6 +17,8 @@ class EventListViewModel: NSObject, ObservableObject {
     @Published var date = Date()
     @Published var isFirstFetchForDay: Bool = true
     @Published var isReallyEmpty: Bool = false
+    @Published var isDoneForDay: Bool = false
+    @Published var isNoConnection: Bool = false
     @Published var errorCode: Int?
     
     var timer: Timer?
@@ -29,7 +31,8 @@ class EventListViewModel: NSObject, ObservableObject {
     // maybe it'd be better if these were separated at some point
     // but that day is not today
     @objc func fetch() {
-        print("fetcheroo")
+        self.isNoConnection = false
+        self.isDoneForDay = false
         // reset the date if we aren't in calendar mode
         if (!userDefaultsStore.isCalendarMode) {
             self.date = Date()
@@ -54,7 +57,8 @@ class EventListViewModel: NSObject, ObservableObject {
             URLSession.shared.dataTask(with: request) { data, response, error in
                 do {
                     guard let unwrappedData = data else {
-                        print("No data")
+                        
+                        DispatchQueue.main.async { self.isNoConnection = true }
                         return
                     }
                     let eventList = try JSONDecoder().decode(EventList.self, from: unwrappedData)
@@ -86,6 +90,7 @@ class EventListViewModel: NSObject, ObservableObject {
                                     }
                                 }
                             }
+                            self.isDoneForDay = (self.events.count == 0) ? true : false
                         }
                     }
 

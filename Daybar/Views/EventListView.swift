@@ -33,6 +33,10 @@ struct EventListView: View {
                         EmptyListView(els: EmptyListState.retriableError, evm: eventListViewModel)
                     } else if (eventListViewModel.isReallyEmpty) {
                         EmptyListView(els: EmptyListState.noEvents)
+                    } else if (eventListViewModel.isDoneForDay) {
+                        EmptyListView(els: EmptyListState.eventsDone)
+                    } else if (eventListViewModel.isNoConnection) {
+                        EmptyListView(els: EmptyListState.noConnection)
                     } else {
                         ForEach(eventListViewModel.events) { item in
                             EventView(eventViewModel: item)
@@ -72,7 +76,7 @@ struct EmptyListView: View {
                     Text("👏")
                         .font(.largeTitle)
                         .frame(width: 200, height: 300)
-                } else if (els == EmptyListState.retriableError) {
+                } else if (els == EmptyListState.retriableError || els == EmptyListState.noConnection) {
                     VStack {
                         Text("🧐")
                             .font(.largeTitle)
@@ -101,6 +105,7 @@ struct EmptyListView: View {
 
 enum EmptyListState {
     case noEvents
+    case noConnection
     case eventsDone
     case retriableError
     case genericError
