@@ -36,7 +36,7 @@ struct signInWithGoogleButtonStyle: ButtonStyle {
         HStack {
             configuration.label
                 .font(Font.system(size: 15, weight: .medium, design: .default))
-                .foregroundColor(.primary)
+                .foregroundColor(.black)
                 .padding(.leading, 36)
         }.frame(width: 208, height: 48).background(
             configuration.isPressed ? Image("white-google-signin-pressed") : Image("white-google-signin-normal")
