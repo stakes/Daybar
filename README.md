@@ -25,3 +25,15 @@ Clicking on event titles will open the Google Calendar details in your web brows
 ### Find a bug?
 
 Please [create an issue](https://github.com/stakes/Daybar/issues) for it!
+
+## Developing Daybar
+
+You'll need a Google account and will need to create a project in the [Google Developer Console](https://console.cloud.google.com/). It'll need [OAuth keys](https://developers.google.com/identity/protocols/oauth2) and an API Key with access to read the [Calendar API](https://developers.google.com/calendar). 
+
+These keys all will go into a property list file called `Keys.plist` with the following:
+
+```
+googleOauthClientSecret
+googleOauthClientId
+googleApiKey
+```
