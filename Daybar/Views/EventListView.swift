@@ -81,7 +81,7 @@ struct EmptyListView: View {
                         Text("🧐")
                             .font(.largeTitle)
                         Text("Hmmm")
-                            .font(.title)
+                            .font(.subheadline)
                             .fontWeight(.semibold)
                         Text("Couldn't fetch meetings.")
                         Button(action: {

@@ -55,12 +55,14 @@ class EventListViewModel: NSObject, ObservableObject {
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             
             URLSession.shared.dataTask(with: request) { data, response, error in
+                var unwrappedData:Data
+                if data != nil {
+                    unwrappedData = data!
+                } else {
+                    unwrappedData = Data.init()
+                    DispatchQueue.main.async { self.isNoConnection = true }
+                }
                 do {
-                    guard let unwrappedData = data else {
-                        
-                        DispatchQueue.main.async { self.isNoConnection = true }
-                        return
-                    }
                     let eventList = try JSONDecoder().decode(EventList.self, from: unwrappedData)
                     DispatchQueue.main.async {
                         if (self.isFirstFetchForDay) {
@@ -95,7 +97,7 @@ class EventListViewModel: NSObject, ObservableObject {
                     }
 
                 } catch _ as NSError {
-                    if let json = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: [String: Any]] {
+                    if let json = try? JSONSerialization.jsonObject(with: unwrappedData, options: []) as? [String: [String: Any]] {
                         let errorMsg = json["error"]
                         DispatchQueue.main.async {
                             if (self.isFirstFetchForDay) {
