@@ -17,6 +17,14 @@
       "oAP" : "\/docs\/.gitignore",
       "oF" : 0
     },
+    "\/Daybar\/Keys.plist" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/docs\/Daybar\/Keys.plist",
+      "oF" : 1
+    },
     "\/node_modules" : {
       "ft" : 65536,
       "oA" : 1,
@@ -31,7 +39,7 @@
       "ft" : 16,
       "ma" : 3,
       "oA" : 1,
-      "oAP" : "\/build\/node_modules\/tailwindcss\/base.css",
+      "oAP" : "\/docs\/node_modules\/tailwindcss\/base.css",
       "oF" : 0,
       "pg" : 2
     },
@@ -43,7 +51,7 @@
       "ft" : 16,
       "ma" : 3,
       "oA" : 1,
-      "oAP" : "\/build\/node_modules\/tailwindcss\/components.css",
+      "oAP" : "\/docs\/node_modules\/tailwindcss\/components.css",
       "oF" : 0,
       "pg" : 2
     },
@@ -55,7 +63,7 @@
       "ft" : 16,
       "ma" : 3,
       "oA" : 1,
-      "oAP" : "\/build\/node_modules\/tailwindcss\/utilities.css",
+      "oAP" : "\/docs\/node_modules\/tailwindcss\/utilities.css",
       "oF" : 0,
       "pg" : 2
     },
@@ -86,12 +94,12 @@
       "sC" : 3,
       "tS" : 0
     },
-    "\/source\/assets\/app-placeholder.png" : {
+    "\/source\/android-chrome-192x192.png" : {
       "ft" : 32768,
-      "iS" : 3758,
+      "iS" : 20656,
       "oA" : 0,
-      "oAP" : "\/docs\/assets\/app-placeholder.png",
-      "oF" : 1,
+      "oAP" : "\/docs\/android-chrome-192x192.png",
+      "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -99,12 +107,12 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/source\/assets\/daybar-16x16.png" : {
+    "\/source\/android-chrome-384x384.png" : {
       "ft" : 32768,
-      "iS" : 564,
+      "iS" : 103005,
       "oA" : 0,
-      "oAP" : "\/docs\/assets\/daybar-16x16.png",
-      "oF" : 1,
+      "oAP" : "\/docs\/android-chrome-384x384.png",
+      "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
@@ -112,15 +120,41 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/source\/assets\/daybar-32x32.png" : {
+    "\/source\/apple-touch-icon.png" : {
       "ft" : 32768,
-      "iS" : 1445,
+      "iS" : 18103,
       "oA" : 0,
-      "oAP" : "\/docs\/assets\/daybar-32x32.png",
-      "oF" : 1,
+      "oAP" : "\/docs\/apple-touch-icon.png",
+      "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
       "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/assets\/daybar-1024x512.jpg" : {
+      "ft" : 16384,
+      "iS" : 90062,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/assets\/daybar-1024x512.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/assets\/daybar-1024x1024.jpg" : {
+      "ft" : 16384,
+      "iS" : 157540,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/assets\/daybar-1024x1024.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -161,6 +195,24 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/source\/assets\/GitHub-Mark.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/docs\/assets\/GitHub-Mark.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/source\/browserconfig.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/browserconfig.xml",
+      "oF" : 0
+    },
     "\/source\/css\/main.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -173,13 +225,39 @@
       "oF" : 1,
       "pg" : 2
     },
+    "\/source\/favicon-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 1147,
+      "oA" : 0,
+      "oAP" : "\/docs\/favicon-16x16.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/favicon-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 1356,
+      "oA" : 0,
+      "oAP" : "\/docs\/favicon-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/source\/favicon.ico" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/docs\/favicon.ico",
-      "oF" : 1
+      "oF" : 0
     },
     "\/source\/index.html" : {
       "cB" : 0,
@@ -188,6 +266,37 @@
       "oA" : 0,
       "oAP" : "\/docs\/index.html",
       "oF" : 1
+    },
+    "\/source\/mstile-150x150.png" : {
+      "ft" : 32768,
+      "iS" : 9300,
+      "oA" : 0,
+      "oAP" : "\/docs\/mstile-150x150.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/source\/safari-pinned-tab.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/docs\/safari-pinned-tab.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/source\/site.webmanifest" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/docs\/site.webmanifest",
+      "oF" : 0
     },
     "\/tailwind.config.js" : {
       "bF" : 0,
@@ -213,7 +322,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-pink",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 642818571.77474499
+    "lastBuiltDate" : 644100157.36814201
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
