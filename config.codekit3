@@ -21,9 +21,15 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/docs\/Daybar\/Keys.plist",
-      "oF" : 1
+      "oF" : 0
+    },
+    "\/docs" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/docs\/docs",
+      "oF" : 0
     },
     "\/node_modules" : {
       "ft" : 65536,
@@ -322,7 +328,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-pink",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 644100249.27161896
+    "lastBuiltDate" : 644191010.401582
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
